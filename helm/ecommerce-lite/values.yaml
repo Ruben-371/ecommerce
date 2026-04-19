@@ -20,7 +20,7 @@ ingress:
 # ── User Service ───────────────────────────────────────────────────────────────
 userService:
   enabled: true
-  replicaCount: 2
+  replicaCount: 1
   image:
     repository: user-service
     tag: ""           # overridden by CI with git SHA
@@ -35,8 +35,8 @@ userService:
       memory: 256Mi
   hpa:
     enabled: true
-    minReplicas: 2
-    maxReplicas: 6
+    minReplicas: 1
+    maxReplicas: 3
     targetCPUUtilizationPercentage: 70
   env:
     JWT_EXPIRES_IN: "7d"
@@ -46,7 +46,7 @@ userService:
 # ── Catalog Service ────────────────────────────────────────────────────────────
 catalogService:
   enabled: true
-  replicaCount: 2
+  replicaCount: 1
   image:
     repository: catalog-service
     tag: ""
@@ -61,8 +61,8 @@ catalogService:
       memory: 256Mi
   hpa:
     enabled: true
-    minReplicas: 2
-    maxReplicas: 8
+    minReplicas: 1
+    maxReplicas: 3
     targetCPUUtilizationPercentage: 70
   env:
     DB_NAME: "catalog"
@@ -70,7 +70,7 @@ catalogService:
 # ── Payment Service ────────────────────────────────────────────────────────────
 paymentService:
   enabled: true
-  replicaCount: 2
+  replicaCount: 1
   image:
     repository: payment-service
     tag: ""
@@ -85,8 +85,8 @@ paymentService:
       memory: 128Mi
   hpa:
     enabled: true
-    minReplicas: 2
-    maxReplicas: 6
+    minReplicas: 1
+    maxReplicas: 3
     targetCPUUtilizationPercentage: 70
 
 # ── MongoDB ────────────────────────────────────────────────────────────────────
