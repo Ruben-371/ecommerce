@@ -4,7 +4,7 @@
 # ══════════════════════════════════════════════════════════════════════════════
 
 global:
-  imageRegistry: "registry.digitalocean.com/your-registry-name"
+  imageRegistry: "registry.digitalocean.com/ecommerce-registry-upv371"
   imageTag: "latest"
   imagePullPolicy: IfNotPresent
 
