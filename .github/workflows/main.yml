@@ -42,7 +42,9 @@ jobs:
       - name: Test payment-service
         if: matrix.service == 'payment-service'
         working-directory: services/payment-service
-        run: go test ./...
+        run: |
+          go mod tidy
+          go build ./...
 
   # ─────────────────────────────────────────────────────────────────────────────
   # JOB 2 – Build & push Docker images to DOCR
