@@ -154,8 +154,7 @@ jobs:
             --set catalogService.image.tag=${{ needs.build-push.outputs.image_tag }} \
             --set paymentService.image.tag=${{ needs.build-push.outputs.image_tag }} \
             --wait \
-            --timeout 5m \
-            --atomic
+            --timeout 10m \
 
       - name: Verify rollout
         run: |
