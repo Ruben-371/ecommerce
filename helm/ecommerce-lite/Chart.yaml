@@ -1,0 +1,15 @@
+apiVersion: v2
+name: ecommerce-lite
+description: E-commerce Lite – microservices Helm chart for DOKS
+type: application
+version: 1.0.0
+appVersion: "1.0.0"
+keywords:
+  - ecommerce
+  - microservices
+  - nodejs
+  - python
+  - golang
+maintainers:
+  - name: Your Name
+    email: you@example.com
