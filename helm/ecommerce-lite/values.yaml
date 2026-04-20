@@ -91,7 +91,7 @@ paymentService:
 
 # ── MongoDB ────────────────────────────────────────────────────────────────────
 mongodb:
-  enabled: true
+  enabled: false
   replicaCount: 1
   image:
     repository: mongo
@@ -104,7 +104,7 @@ mongodb:
 
 # ── PostgreSQL ─────────────────────────────────────────────────────────────────
 postgresql:
-  enabled: true
+  enabled: false
   image:
     repository: postgres
     tag: "16-alpine"
